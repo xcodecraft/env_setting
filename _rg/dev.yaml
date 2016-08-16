@@ -1,0 +1,10 @@
+# from default Template
+_dev:
+    - !C.project
+        name : "env_setting"
+        root : "./"
+    - !C.version
+        file : "version.txt"
+    - !C.git
+        remote : "git@github.com:xcodecraft/xcc_env.git"
+

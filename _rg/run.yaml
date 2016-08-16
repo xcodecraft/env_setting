@@ -1,0 +1,15 @@
+# from default Template
+_env:
+    - !R.env
+        _name    : "dev"
+        _res :
+            - !R.project
+                root : "${HOME}/devspace/xcc_env"
+                name : "xcc_env"
+_sys:
+    -  !R.system
+        _name : "test"
+        _res  :
+            - !R.echo
+                value         : "${PRJ_ROOT}"
+
