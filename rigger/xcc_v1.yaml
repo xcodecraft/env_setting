@@ -11,16 +11,6 @@ _env:
 
 
     - !R.env
-        _name    : "_ci_deploy"
-        _res :
-            - !R.project
-                root      : "/data/ci_space/${PRJ_NAME}"
-                name      : "${PRJ_NAME}"
-            - !R.vars
-                XCC_SDK       : "/data/x/sdks/xcc_sdks"
-                RUN_USER      : "xcc"
-
-    - !R.env
         _name    : "_sdk_deploy"
         _res :
             - !R.project
@@ -30,6 +20,16 @@ _env:
                 XCC_SDK       : "/data/x/sdks/xcc_sdks"
                 RUN_USER      : "xcc"
 
+
+    - !R.env
+        _name    : "_project_deploy"
+        _res :
+            - !R.project
+                root      : "/data/x/projects/${PRJ_NAME}"
+                name      : "${PRJ_NAME}"
+            - !R.vars
+                XCC_SDK       : "/data/x/sdks/xcc_sdks"
+                RUN_USER      : "xcc"
 
     - !R.env
         _name    : "_xcc_deploy"
