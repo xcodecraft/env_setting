@@ -43,53 +43,6 @@ _env:
 
 
     - !R.env
-        _name    : "_dev"
-        _res :
-            - !R.vars
-                POSTFIX_DOMAIN  : "${USER}.dev.xcodecraft.cn"
-
-    - !R.env
-        _name    : "_demo"
-        _res :
-            - !R.vars
-                POSTFIX_DOMAIN  : "demo.xcodecraft.cn"
-
-    - !R.env
-        _name    : "_test"
-        _res :
-            - !R.vars
-                POSTFIX_DOMAIN  : "test.xcodecraft.cn"
-
-    - !R.env
-        _name    : "_ci"
-        _res :
-            - !R.vars
-                POSTFIX_DOMAIN : "ci.xcodecraft.cn"
-
-
-    - !R.env
-        _name    : "_lab"
-        _res :
-            - !R.vars
-                POSTFIX_DOMAIN : "lab.xcodecraft.cn"
-
-
-    - !R.env
-        _name    : "_online"
-        _res :
-            - !R.vars
-                POSTFIX_DOMAIN  : "xcodecraft.cn"
-
-    - !R.env
-        _name : "_base"
-        _res :
-            - !R.vars
-                PYLON  : "/data/x/framework/pylon-ng/"
-                RIGGER : "/data/x/tools/rigger-ng/"
-            - !R.path
-                dst  : "${PRJ_ROOT}/conf/used "
-
-    - !R.env
         _name    : "_speed_max"
         _res :
             - !R.vars
@@ -120,6 +73,58 @@ _env:
                 PHP_ERROR : "E_ERROR"
                 DEBUG     : "XOFF"
                 LOG_MODE  : "ONLINE"
+
+    - !R.env
+        _name    : "_dev"
+        _res :
+            - !R.vars
+                POSTFIX_DOMAIN  : "${USER}.dev.xcodecraft.cn"
+
+    - !R.env
+        _name    : "_demo"
+        _mix     : "_speed_min,_debug"
+        _res :
+            - !R.vars
+                POSTFIX_DOMAIN  : "demo.xcodecraft.cn"
+
+    - !R.env
+        _name    : "_test"
+        _mix     : "_speed_min,_debug"
+        _res :
+            - !R.vars
+                POSTFIX_DOMAIN  : "test.xcodecraft.cn"
+
+    - !R.env
+        _name    : "_ci"
+        _res :
+            - !R.vars
+                POSTFIX_DOMAIN : "ci.xcodecraft.cn"
+
+
+    - !R.env
+        _name    : "_lab"
+        _mix     : "_speed_min,_debug"
+        _res :
+            - !R.vars
+                POSTFIX_DOMAIN : "lab.xcodecraft.cn"
+
+
+    - !R.env
+        _name    : "_online"
+        _mix     : "_speed_max,_release"
+        _res :
+            - !R.vars
+                POSTFIX_DOMAIN  : "xcodecraft.cn"
+
+    - !R.env
+        _name : "_base"
+        _res :
+            - !R.vars
+                PYLON  : "/data/x/framework/pylon-ng/"
+                RIGGER : "/data/x/tools/rigger-ng/"
+            - !R.path
+                dst  : "${PRJ_ROOT}/conf/used "
+
 _mod :
     - !R.modul
         _name : "xcc_init"
