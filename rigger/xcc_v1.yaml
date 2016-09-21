@@ -133,7 +133,7 @@ _mod :
             INIT_SQL : "${PRJ_ROOT}/src/sys_init/create_db.sql"
             INIT_PHP : "${PRJ_ROOT}/src/sys_init/sys_init.php"
             INIT_SH  : ""
-            web_ROOT : "/data/x/env/xcc_env/web/v1/"
+            web_ROOT : "/data/x/etc/xcc_env/web/v1/"
             USE_ROOT : "${PRJ_ROOT}/conf/used/"
         _res  :
             - !R.mysql
@@ -155,7 +155,7 @@ _mod :
         _name : "xcc_console"
         _args :
             PHP_INI  : "${PRJ_ROOT}/conf/used/console_php.ini"
-            TPL_ROOT : "/data/x/env/xcc_env/web/v1/"
+            TPL_ROOT : "/data/x/etc/xcc_env/web/v1/"
             USE_ROOT : "${PRJ_ROOT}/conf/used/"
         _res  :
 
@@ -169,7 +169,7 @@ _mod :
     - !R.modul
         _name : "xcc_api"
         _args :
-            TPL_ROOT     : "/data/x/env/xcc_env/web/v1/"
+            TPL_ROOT     : "/data/x/etc/xcc_env/web/v1/"
             USE_ROOT     : "${PRJ_ROOT}/conf/used/"
             TAG          : "api"
             API_ENTRY    : "${PRJ_ROOT}/sys_api/"
@@ -197,7 +197,7 @@ _mod :
     - !R.modul
         _name : "xcc_web"
         _args :
-            TPL_ROOT     : "/data/x/env/xcc_env/web/v1/"
+            TPL_ROOT     : "/data/x/etc/xcc_env/web/v1/"
             USE_ROOT     : "${PRJ_ROOT}/conf/used/"
             TAG          : "web"
             WEB_ENTRY    : "${PRJ_ROOT}/sys_admin/"
@@ -227,7 +227,7 @@ _mod :
         _args :
             TAG          : None
             INCLUDE_PATH : None
-            TPL_ROOT     : "/data/x/env/xcc_env/web/v1/"
+            TPL_ROOT     : "/data/x/etc/xcc_env/web/v1/"
             USE_ROOT     : "${PRJ_ROOT}/conf/used/"
             INI_TPL      : "${TPL_ROOT}/console_php.ini"
         _res  :
@@ -246,7 +246,7 @@ _mod :
              API_ENTRY    : "${PRJ_ROOT}/src/sys_api"
              TEST_PATH    : "test"
              CONF_PATH    : "conf"
-             TPL_ROOT     : "/data/x/env/xcc_env/web/v1/"
+             TPL_ROOT     : "/data/x/etc/xcc_env/web/v1/"
              USE_ROOT     : "${PRJ_ROOT}/conf/used/"
              INI_TPL      : "${TPL_ROOT}/test_php.ini"
 
