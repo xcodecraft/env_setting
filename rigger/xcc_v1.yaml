@@ -76,6 +76,7 @@ _env:
 
     - !R.env
         _name    : "_dev"
+        _mix     : "_speed_min,_debug"
         _res :
             - !R.vars
                 POSTFIX_DOMAIN  : "${USER}.dev.xcodecraft.cn"
