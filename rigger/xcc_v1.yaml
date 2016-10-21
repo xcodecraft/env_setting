@@ -121,7 +121,7 @@ _env:
         _name : "_base"
         _res :
             - !R.vars
-                PYLON  : "/data/x/framework/pylon-ng/"
+                PYLON  : "/data/x/libs/pylon-ng/"
                 RIGGER : "/data/x/tools/rigger-ng/"
             - !R.path
                 dst  : "${PRJ_ROOT}/conf/used "
